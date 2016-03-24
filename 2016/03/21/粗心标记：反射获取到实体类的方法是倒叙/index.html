@@ -1,173 +1,79 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-
-<title>
   
-    粗心标记：反射获取到实体类的方法是倒叙
+  <title>粗心标记：反射获取到实体类的方法是倒叙 | 枯枝的博客</title>
+  <meta name="author" content="yao">
   
-</title>
+  <meta name="description" content="今天学习了反射，按照Rollen Holt的博客 http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalAr">
+  
+  
 
-<meta name="description" content="今天学习了反射，按照Rollen Holt的博客 http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="粗心标记：反射获取到实体类的方法是倒叙">
-<meta property="og:url" content="http://yoursite.com/2016/03/21/粗心标记：反射获取到实体类的方法是倒叙/index.html">
-<meta property="og:site_name" content="枯枝的博客">
-<meta property="og:description" content="今天学习了反射，按照Rollen Holt的博客 http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数">
-<meta property="og:updated_time" content="2016-03-21T07:44:40.030Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="粗心标记：反射获取到实体类的方法是倒叙">
-<meta name="twitter:description" content="今天学习了反射，按照Rollen Holt的博客 http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <meta property="og:title" content="粗心标记：反射获取到实体类的方法是倒叙"/>
+  <meta property="og:site_name" content="枯枝的博客"/>
 
-  <link rel="alternative" href="/atom.xml" title="枯枝的博客" type="application/atom+xml">
+  
+    <meta property="og:image" content="undefined"/>
+  
 
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="/styles/main.css">
-
-
-
-
-
-
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="枯枝的博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
-<body
-  
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">枯枝的博客</a>
+
+
+<body>
+<div id="page" class="site">
+  <div id="primary" class="content-area">
+
+    <header id="header" class="inner"><div class="site-branding">
+  <h1 class="site-title">
+    <a href="/">枯枝的博客</a>
+  </h1>
+  <p class="site-description"></p>
 </div>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+</nav></header>
 
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">枯枝的博客</a></h1>
-    
-    <div class="info">
-      <div class="content">
-        
-        
-          <div class="author">yao</div>
-        
-      </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
-          
-        </div>
-      
-    </div>
-  </div>
-  <div class="body">
-    
-      
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">Category</a>
-                
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">Tag</a>
-                
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">5</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="external">Chan</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="https://github.com/denjones" title="Github" target="_blank" rel="external">Github</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/atom.xml" title="RSS">RSS</a>
-              </li>
-            
-          
-        </ul>
-      
-    
-  </div>
-</div>
+    <article id="content" class="site-content">
+      <main id="main" class="site-main posts-loop" role="main">
+        <article class="post article">
 
-    <div class="main-content">
-      
-        <div style="max-width: 1000px">
-      
-          <article id="post-粗心标记：反射获取到实体类的方法是倒叙" class="article article-type-post">
-  
-    <h1 class="article-header">
-      粗心标记：反射获取到实体类的方法是倒叙
-    </h1>
   
   
+    <h3 class="article-title"><span>粗心标记：反射获取到实体类的方法是倒叙</span></h3>
+  
 
-  <div class="article-info">
-    <span class="article-date">
-  2016-03-21
-</span>
 
-    
-
-    
-
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2016/03/21/粗心标记：反射获取到实体类的方法是倒叙/" rel="bookmark">
+        <time class="entry-date published" datetime="2016-03-21T07:20:15.000Z">
+          2016-03-21
+        </time>
+      </a>
+    </span>
   </div>
-  <div class="article-entry">
-    <p>今天学习了反射，按照Rollen Holt的博客 <a href="http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html" target="_blank" rel="external">http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html</a> 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数。先上代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">     </span><br><span class="line">    public <span class="function"><span class="title">Person</span></span>() &#123;</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name)&#123;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(int age)&#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name, int age) &#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String <span class="function"><span class="title">toString</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"["</span>+this.name+<span class="string">"  "</span>+this.age+<span class="string">"]"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class hello&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Class&lt;?&gt; demo=null;</span><br><span class="line">        try&#123;</span><br><span class="line">            demo=Class.forName(<span class="string">"Reflect.Person"</span>);</span><br><span class="line">        &#125;catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Person per1=null;</span><br><span class="line">        Person per2=null;</span><br><span class="line">        Person per3=null;</span><br><span class="line">        Person per4=null;</span><br><span class="line">        //取得全部的构造函数</span><br><span class="line">        Constructor&lt;?&gt; cons[]=demo.getConstructors();</span><br><span class="line">        try&#123;</span><br><span class="line">            per1=(Person)cons[0].newInstance();</span><br><span class="line">            per2=(Person)cons[1].newInstance(<span class="string">"yao"</span>);</span><br><span class="line">            per3=(Person)cons[2].newInstance(<span class="string">"yao"</span>,26);</span><br><span class="line">            per4=(Person)cons[3].newInstance(26);</span><br><span class="line">        &#125;catch(Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(per1);</span><br><span class="line">        System.out.println(per2);</span><br><span class="line">        System.out.println(per3);</span><br><span class="line">        System.out.println(per4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>今天学习了反射，按照Rollen Holt的博客 <a href="http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html" target="_blank" rel="external">http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html</a> 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数。先上代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">     </span><br><span class="line">    public <span class="function"><span class="title">Person</span></span>() &#123;</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name)&#123;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(int age)&#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name, int age) &#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String <span class="function"><span class="title">toString</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"["</span>+this.name+<span class="string">"  "</span>+this.age+<span class="string">"]"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class hello&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Class&lt;?&gt; demo=null;</span><br><span class="line">        try&#123;</span><br><span class="line">            demo=Class.forName(<span class="string">"Reflect.Person"</span>);</span><br><span class="line">        &#125;catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Person per1=null;</span><br><span class="line">        Person per2=null;</span><br><span class="line">        Person per3=null;</span><br><span class="line">        Person per4=null;</span><br><span class="line">        //取得全部的构造函数</span><br><span class="line">        Constructor&lt;?&gt; cons[]=demo.getConstructors();</span><br><span class="line">        try&#123;</span><br><span class="line">            per1=(Person)cons[0].newInstance();</span><br><span class="line">            per2=(Person)cons[1].newInstance(<span class="string">"yao"</span>);</span><br><span class="line">            per3=(Person)cons[2].newInstance(<span class="string">"yao"</span>,26);</span><br><span class="line">            per4=(Person)cons[3].newInstance(26);</span><br><span class="line">        &#125;catch(Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(per1);</span><br><span class="line">        System.out.println(per2);</span><br><span class="line">        System.out.println(per3);</span><br><span class="line">        System.out.println(per4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>搜了百度才知道，通过反射实例化对象，实例化的脚标得跟实体类中的方法一一对应，所以就把per2与per4的实例化进行了调换，不过之后还是报错；错误的参数个数，同一个错误，后来就问了一下liang せんせい，他说让我打印一下反射出来的构造函数数组每一个构造函数的签名，因为反射出来的构造函数顺序不一定。之后我就在[Constructor&lt;?&gt; cons[]=demo.getConstructors();]之下加上了log,运行后发现</p>
 <pre><code class="bash">person:this is 1<span class="string">'s method :public com.example.Person(java.lang.String,int)
 person:this is 2'</span>s method :public com.example.Person(int)
@@ -182,118 +88,41 @@ per4 = (Person) constructor[0].newInstance(<span class="string">"yao"</span>, 26
 </code></pre>
 <p>之后运行就没再报错<br>[null  0]<br>[yao  0]<br>[null  26]<br>[yao  26]<br>因为由于打log时马虎了一下，所以在此标记一下，希望自己长点记性，(ง •̀_•́)ง</p>
 
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
-      <img src="/images/cc/cc.png">
       
-          <img src="/images/cc/by.png">
+    </div>
+    <footer class="article-footer">
+        <div class="article-meta pull-left">
+          <span class="post-categories">
+            <i class="icon-categories"></i>
+            
+          </span>
+          <span class="post-tags">
+            <i class="icon-tags"></i>
+            
+          </span>
+        </div>
         
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-      </span>
-    </a>
+    </footer>
   </div>
-
-
-    
-
-  </footer>
 </article>
 
-
-
-
-
-
-
-          <div class="main-footer">
   
-    © 2016 枯枝的博客 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
-  
+
+      </main>
+    </article>
+
+    <footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info">
+  <p class="meta">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2016 yao
+    
+  </p>
+</div></footer>
+    
+  </div>
 </div>
-
-      
-        </div>
-      
-    </div>
-  </div>
-  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/PhotoSwipe/photoswipe.js"></script>
-  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
-
-
-<script src="/scripts/main.js"></script>
-
 </body>
 </html>
