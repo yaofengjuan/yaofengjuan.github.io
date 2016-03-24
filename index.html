@@ -77,16 +77,14 @@
   
   <div class="entry">
     
-      <p><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/1.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/2.jpg" alt="美女"><br></p>
+      <p><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/1.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/2.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/3.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/4.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/5.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/6.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/7.jpg" alt="美女"><br><img src="https://raw.githubusercontent.com/yaofengjuan/yaofengjuan.github.io/master/images/%E3%80%90%E9%9D%9E%E7%83%9F%E3%80%91%E7%AB%B9%E7%AF%87/8.jpg" alt="美女"></p>
 
     
   </div>
   <footer class="end-sep">
     
       
-      <div class="alignleft">
-          <a href="/2016/03/21/美女养眼-其实是为了测试如何上传图片/" class="more-link">Read More</a>
-        </div>
+      
     
     <div class="clearfix"></div>
   </footer>
@@ -113,14 +111,27 @@
   
   <div class="entry">
     
-      <p>今天学习了反射，按照Rollen Holt的博客 <a href="http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html" target="_blank" rel="external">http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html</a> 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数。先上代码<br></p>
+      <p>今天学习了反射，按照Rollen Holt的博客 <a href="http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html" target="_blank" rel="external">http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html</a> 写好了列子，运行时报错了：Exception in thread “main” java.lang.IllegalArgumentException: wrong number of arguments；错误的参数个数。先上代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">     </span><br><span class="line">    public <span class="function"><span class="title">Person</span></span>() &#123;</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name)&#123;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(int age)&#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name, int age) &#123;</span><br><span class="line">        this.age=age;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String <span class="function"><span class="title">toString</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"["</span>+this.name+<span class="string">"  "</span>+this.age+<span class="string">"]"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class hello&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Class&lt;?&gt; demo=null;</span><br><span class="line">        try&#123;</span><br><span class="line">            demo=Class.forName(<span class="string">"Reflect.Person"</span>);</span><br><span class="line">        &#125;catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Person per1=null;</span><br><span class="line">        Person per2=null;</span><br><span class="line">        Person per3=null;</span><br><span class="line">        Person per4=null;</span><br><span class="line">        //取得全部的构造函数</span><br><span class="line">        Constructor&lt;?&gt; cons[]=demo.getConstructors();</span><br><span class="line">        try&#123;</span><br><span class="line">            per1=(Person)cons[0].newInstance();</span><br><span class="line">            per2=(Person)cons[1].newInstance(<span class="string">"yao"</span>);</span><br><span class="line">            per3=(Person)cons[2].newInstance(<span class="string">"yao"</span>,26);</span><br><span class="line">            per4=(Person)cons[3].newInstance(26);</span><br><span class="line">        &#125;catch(Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(per1);</span><br><span class="line">        System.out.println(per2);</span><br><span class="line">        System.out.println(per3);</span><br><span class="line">        System.out.println(per4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>搜了百度才知道，通过反射实例化对象，实例化的脚标得跟实体类中的方法一一对应，所以就把per2与per4的实例化进行了调换，不过之后还是报错；错误的参数个数，同一个错误，后来就问了一下liang せんせい，他说让我打印一下反射出来的构造函数数组每一个构造函数的签名，因为反射出来的构造函数顺序不一定。之后我就在[Constructor&lt;?&gt; cons[]=demo.getConstructors();]之下加上了log,运行后发现</p>
+<pre><code class="bash">person:this is 1<span class="string">'s method :public com.example.Person(java.lang.String,int)
+person:this is 2'</span>s method :public com.example.Person(int)
+person:this is 3<span class="string">'s method :public com.example.Person(java.lang.String)
+person:this is 4'</span>s method :public com.example.Person()
+</code></pre>
+<p>原来顺序是实体类中的倒叙，所以就按下面做了调整</p>
+<pre><code class="bash">per1 = (Person) constructor[3].newInstance();
+per2 = (Person) constructor[2].newInstance(<span class="string">"yao"</span>);
+per3 = (Person) constructor[1].newInstance(26);
+per4 = (Person) constructor[0].newInstance(<span class="string">"yao"</span>, 26);
+</code></pre>
+<p>之后运行就没再报错<br>[null  0]<br>[yao  0]<br>[null  26]<br>[yao  26]<br>因为由于打log时马虎了一下，所以在此标记一下，希望自己长点记性，(ง •̀_•́)ง</p>
+
+    
   </div>
   <footer class="end-sep">
     
       
-          <div class="alignleft">
-          <a href="/2016/03/21/粗心标记：反射获取到实体类的方法是倒叙/" class="more-link">Read More</a>
-        </div>
+      
     
     <div class="clearfix"></div>
   </footer>
@@ -153,9 +164,7 @@
   </div>
   <footer class="end-sep">
     
-           <div class="alignleft">
-          <a href="/2016/03/18/compileSdkVersion与dependencies库中的上下级关系/" class="more-link">Read More</a>
-        </div>
+      
       
     
     <div class="clearfix"></div>
@@ -183,14 +192,15 @@
   
   <div class="entry">
     
-      <p>今天一整天都在弄这个Hexo,终于在下午弄成了，上午在通过命令搭建Hexo+Github中hexo deploy命令一直没有起到效果，而且由于我把建在github上的新项目设置成了GitHub Page 导致刚才那个命令不能实现</p>
+      <p>今天一整天都在弄这个Hexo,终于在下午弄成了，上午在通过命令搭建Hexo+Github中hexo deploy命令一直没有起到效果，而且由于我把建在github上的新项目设置成了GitHub Page 导致刚才那个命令不能实现，之后又删除再重新部署，还是没有成功，具体原因实在是不清楚，查看的部署资料是这个 <a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a> ，之后出现了这上面的错误 <a href="http://www.v2ex.com/t/175940" target="_blank" rel="external">http://www.v2ex.com/t/175940</a> 并通过Melodic的回复解决了，额，虽然耗费了很多时间，但是成了，还是很开心的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">撒花   (｡・`ω´･)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://m.tiebaimg.com/timg?wapp&amp;quality=80&amp;size=b150_150&amp;subsize=20480&amp;cut_x=0&amp;cut_w=0&amp;cut_y=0&amp;cut_h=0&amp;sec=1369815402&amp;srctrace&amp;di=8e63b58ed678ac69aba26c204d67ad4a&amp;wh_rate=null&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Fd52a2834349b033b426ff36d17ce36d3d439bda5.jpg" alt="flower"></p>
+
+    
   </div>
   <footer class="end-sep">
     
       
-              <div class="alignleft">
-          <a href="/2016/03/16/My-New-Post/" class="more-link">Read More</a>
-        </div>
+      
     
     <div class="clearfix"></div>
   </footer>
@@ -220,15 +230,19 @@
       <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
     
   </div>
   <footer class="end-sep">
     
- <div class="alignleft">
-          <a href="/2016/03/16/hello-world/" class="more-link">Read More</a>
-        </div>
-     
+      
+      
     
     <div class="clearfix"></div>
   </footer>
