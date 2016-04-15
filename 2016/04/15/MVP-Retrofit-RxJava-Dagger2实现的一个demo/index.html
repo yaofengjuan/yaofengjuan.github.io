@@ -23,7 +23,7 @@
 有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
 <meta property="og:image" content="http://a.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg">
 <meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png">
-<meta property="og:updated_time" content="2016-04-15T08:10:54.581Z">
+<meta property="og:updated_time" content="2016-04-15T08:13:09.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVP+Retrofit+RxJava++Dagger2实现的一个demo">
 <meta name="twitter:description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
@@ -83,9 +83,7 @@
     
       <p>因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。<br>MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）<br>模型图如下：<br><img src="http://a.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg" alt="MVP模式"></p>
 <p>有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交互可以通过松耦合进行达到，比如通过接口。<br>下面是我参照别人的博客写的例子，不好意思啊，当时忘了把参照的资料的链接保存下来，所以再次对参照资料的前辈说声对不起。</p>
-<h2 id="MVP实例demo"><a href="#MVP实例demo" class="headerlink" title="MVP实例demo"></a>MVP实例demo</h2><p>1.项目结构<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png" alt="aa"><br>2.MOdel层<br>因为接收的实体MovieEntity包含的内容过多，我就不贴了，其实就是一个接收Json数据的一个实体类。<br>为了做到与Presenter的松耦合，我创建了一个IMovieModel接口<br>public interface IMovieModel {</p>
-<pre><code>void load(Subscriber&lt;MovieEntity&gt; subscriber);//获取info
-</code></pre><p>}<br><a id="more"></a><br>里面只有一个方法就是获取豆瓣电影信息，传的参数是回调参数，获取数据我使用的框架是Retrofit+RxJava。如果还没有了解Retrofit+RxJava，我建议先了解一下他们的用法，之后对IMovieModel进行实例化，如下：<br>public class MovieModel implements IMovieModel {</p>
+<h2 id="MVP实例demo"><a href="#MVP实例demo" class="headerlink" title="MVP实例demo"></a>MVP实例demo</h2><p>1.项目结构<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png" alt="项目结构"><br>2.MOdel层<br>因为接收的实体MovieEntity包含的内容过多，我就不贴了，其实就是一个接收Json数据的一个实体类。<br>为了做到与Presenter的松耦合，我创建了一个IMovieModel接口<br>public interface IMovieModel {<br>    void load(Subscriber<movieentity> subscriber);//获取info<br>}<br><a id="more"></a><br>里面只有一个方法就是获取豆瓣电影信息，传的参数是回调参数，获取数据我使用的框架是Retrofit+RxJava。如果还没有了解Retrofit+RxJava，我建议先了解一下他们的用法，之后对IMovieModel进行实例化，如下：<br>public class MovieModel implements IMovieModel {</movieentity></p>
 <pre><code>/**
  * 进行网络请求
  */
