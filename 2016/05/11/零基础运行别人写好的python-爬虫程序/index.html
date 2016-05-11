@@ -18,10 +18,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/11/零基础运行别人写好的python-爬虫程序/index.html">
 <meta property="og:site_name" content="枯枝的博客">
 <meta property="og:description" content="使用的爬虫程序是桩白墨 PLOUGH的我的第一只爬虫：爬取豆瓣读书1.先下载python2.python目录添加到环境变量里3.打开IDLE (Python GUI)可在开始里面查找4.点击File-&amp;gt;Open打开下载的book_list_spider.py文件，然后Run">
-<meta property="og:updated_time" content="2016-05-11T08:21:33.337Z">
+<meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/book_list.png?raw=true">
+<meta property="og:updated_time" content="2016-05-11T08:27:21.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="零基础运行别人写好的python 爬虫程序">
 <meta name="twitter:description" content="使用的爬虫程序是桩白墨 PLOUGH的我的第一只爬虫：爬取豆瓣读书1.先下载python2.python目录添加到环境变量里3.打开IDLE (Python GUI)可在开始里面查找4.点击File-&amp;gt;Open打开下载的book_list_spider.py文件，然后Run">
+<meta name="twitter:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/book_list.png?raw=true">
   
     <link rel="alternate" href="/atom.xml" title="枯枝的博客" type="application/atom+xml">
   
@@ -74,7 +76,7 @@
   
   <div class="entry">
     
-      <p>使用的爬虫程序是桩白墨 PLOUGH的<a href="http://baimoz.me/379/" target="_blank" rel="external">我的第一只爬虫：爬取豆瓣读书</a><br>1.先下载python<br>2.python目录添加到环境变量里<br>3.打开IDLE (Python GUI)可在开始里面查找<br>4.点击File-&gt;Open打开下载的book_list_spider.py文件，然后Run<br><a id="more"></a><br>报错：<br>1.ImportError:No module named request<br>解决方法是使用pip软件包管理工具进行安装和卸python包。pip的安装可以参照此链接<a href="http://www.360doc.com/content/14/1017/08/10724725_417590569.shtml" target="_blank" rel="external">windows下python包管理工具pip的安装与使用</a><br>pip的Scripts的路径添加到环境变量后，直接在window的命令窗口执行pip install request,下载完之后再次运行爬虫程序<br>2.ImportError: No module named ‘bs4’<br>在window的命令窗口执行pip install BeautifulSoup4<br>3.NameError: name ‘reload’ is not defined<br>在爬虫程序中添加from imp import reload，之后再运行会报ttributeError: ‘module’ object has no attribute ‘setdefaultencoding’的错误，在网上查找了解决方案，但是还是报这个错误，这句命令的作用是设置默认编码方式为utf-8,实在不知道为啥不起效果我就把它给注释了。<br>4.UnicodeEncodeError: ‘gbk’ codec can’t encode character ‘\u2022’ in position<br>是因为写入文件的编码方式为GBK,无法对汉字进行编码，所以报错，解决方法来至此链接<a href="http://blog.csdn.net/greatpresident/article/details/8209712" target="_blank" rel="external">http://blog.csdn.net/greatpresident/article/details/8209712</a><br>直接改变目标文件的编码f = open(file_name, ‘w’,encoding=’utf-8’)，之后再次运行程序就成功了，之后可在python安装目录里查看book-list.txt</p>
+      <p>使用的爬虫程序是桩白墨 PLOUGH的<a href="http://baimoz.me/379/" target="_blank" rel="external">我的第一只爬虫：爬取豆瓣读书</a><br>1.先下载python<br>2.python目录添加到环境变量里<br>3.打开IDLE (Python GUI)可在开始里面查找<br>4.点击File-&gt;Open打开下载的book_list_spider.py文件，然后Run<br><a id="more"></a><br>报错：<br>1.ImportError:No module named request<br>解决方法是使用pip软件包管理工具进行安装和卸python包。pip的安装可以参照此链接<a href="http://www.360doc.com/content/14/1017/08/10724725_417590569.shtml" target="_blank" rel="external">windows下python包管理工具pip的安装与使用</a><br>pip的Scripts的路径添加到环境变量后，直接在window的命令窗口执行pip install request,下载完之后再次运行爬虫程序<br>2.ImportError: No module named ‘bs4’<br>在window的命令窗口执行pip install BeautifulSoup4<br>3.NameError: name ‘reload’ is not defined<br>在爬虫程序中添加from imp import reload，之后再运行会报ttributeError: ‘module’ object has no attribute ‘setdefaultencoding’的错误，在网上查找了解决方案，但是还是报这个错误，这句命令的作用是设置默认编码方式为utf-8,实在不知道为啥不起效果我就把它给注释了。<br>4.UnicodeEncodeError: ‘gbk’ codec can’t encode character ‘\u2022’ in position<br>是因为写入文件的编码方式为GBK,无法对汉字进行编码，所以报错，解决方法来至此链接<a href="http://blog.csdn.net/greatpresident/article/details/8209712" target="_blank" rel="external">http://blog.csdn.net/greatpresident/article/details/8209712</a><br>直接改变目标文件的编码f = open(file_name, ‘w’,encoding=’utf-8’)，之后再次运行程序就成功了，之后可在python安装目录里查看book-list.txt<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/book_list.png?raw=true" alt="图片"></p>
 
     
   </div>
