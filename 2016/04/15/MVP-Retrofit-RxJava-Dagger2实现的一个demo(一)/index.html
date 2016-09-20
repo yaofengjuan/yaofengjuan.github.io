@@ -19,14 +19,14 @@
 <meta property="og:site_name" content="枯枝的博客">
 <meta property="og:description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
 有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
-<meta property="og:image" content="http://a.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg">
+<meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.png?raw=true">
 <meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png?raw=true">
-<meta property="og:updated_time" content="2016-05-10T08:18:55.114Z">
+<meta property="og:updated_time" content="2016-09-20T08:03:38.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)">
 <meta name="twitter:description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
 有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
-<meta name="twitter:image" content="http://a.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg">
+<meta name="twitter:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.png?raw=true">
 
     
     <link rel="alternative" href="/atom.xml" title="枯枝的博客" type="application/atom+xml">
@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="枯枝的博客">枯枝的博客</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -70,7 +70,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -93,20 +93,20 @@
 		<a href="/about" title="yao" target="_blank" itemprop="author">yao</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-15T07:00:10.000Z" itemprop="datePublished"> Published 2016-04-15</time>
+    <time datetime="2016-04-15T07:00:10.000Z" itemprop="datePublished"> 發表於 2016-04-15</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目錄</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVP实例demo"><span class="toc-number">1.</span> <span class="toc-text">MVP实例demo</span></a></li></ol>
 		
 		</div>
 		
-		<p>因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。<br>MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）<br>模型图如下：<br><img src="http://a.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg" alt="MVP模式"></p>
+		<p>因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。<br>MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）<br>模型图如下：<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.png?raw=true" alt="MVP模式"></p>
 <p>有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交互可以通过松耦合进行达到，比如通过接口。<br>下面是我参照别人的博客写的例子，不好意思啊，当时忘了把参照的资料的链接保存下来，所以再次对参照资料的前辈说声对不起。</p>
 <h2 id="MVP实例demo"><a href="#MVP实例demo" class="headerlink" title="MVP实例demo"></a>MVP实例demo</h2><p>1.项目结构<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png?raw=true" alt="项目结构"><br>2.MOdel层<br>因为接收的实体MovieEntity包含的内容过多，我就不贴了，其实就是一个接收Json数据的一个实体类。<br>为了做到与Presenter的松耦合，我创建了一个IMovieModel接口</p>
 <pre><code>public interface IMovieModel 
@@ -309,17 +309,17 @@ public void showErro(String erroMsg) {
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目錄</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVP实例demo"><span class="toc-number">1.</span> <span class="toc-text">MVP实例demo</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -330,7 +330,7 @@ public void showErro(String erroMsg) {
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -352,11 +352,11 @@ public void showErro(String erroMsg) {
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -583,7 +583,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
