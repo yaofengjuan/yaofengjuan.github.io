@@ -4,29 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>MVP-Retrofit-RxJava-Dagger2实现的一个demo(一) | 枯枝的博客</title>
+    <title>gradle build Task lint错误 | 枯枝的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="yao">
     
 
     
-    <meta name="description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
-有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
+    <meta name="description" content="lint 错误，gradle 在build 任务中执行到lint任务时，在项目中检测到的错误，一般这些错误可以忽略，所以在报错的同时还给出了解决方法
+12345678910Error:Execution failed for task &amp;apos;:openCVLibrary2410:lint&amp;apos;.&amp;gt; Lint found errors in the project; abortin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)">
-<meta property="og:url" content="http://yoursite.com/2016/04/15/MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)/index.html">
+<meta property="og:title" content="gradle build Task lint错误">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/gradle-build-Task-lint错误/index.html">
 <meta property="og:site_name" content="枯枝的博客">
-<meta property="og:description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
-有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
-<meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.jpg?raw=true">
-<meta property="og:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png?raw=true">
-<meta property="og:updated_time" content="2016-09-20T08:07:28.305Z">
+<meta property="og:description" content="lint 错误，gradle 在build 任务中执行到lint任务时，在项目中检测到的错误，一般这些错误可以忽略，所以在报错的同时还给出了解决方法
+12345678910Error:Execution failed for task &amp;apos;:openCVLibrary2410:lint&amp;apos;.&amp;gt; Lint found errors in the project; abortin">
+<meta property="og:updated_time" content="2017-03-03T03:06:36.267Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)">
-<meta name="twitter:description" content="因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）模型图如下：
-有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交">
-<meta name="twitter:image" content="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.jpg?raw=true">
+<meta name="twitter:title" content="gradle build Task lint错误">
+<meta name="twitter:description" content="lint 错误，gradle 在build 任务中执行到lint任务时，在项目中检测到的错误，一般这些错误可以忽略，所以在报错的同时还给出了解决方法
+12345678910Error:Execution failed for task &amp;apos;:openCVLibrary2410:lint&amp;apos;.&amp;gt; Lint found errors in the project; abortin">
 
     
     <link rel="alternative" href="/atom.xml" title="枯枝的博客" type="application/atom+xml">
@@ -86,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/15/MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)/" title="MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)" itemprop="url">MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)</a>
+      <a href="/2017/03/03/gradle-build-Task-lint错误/" title="gradle build Task lint错误" itemprop="url">gradle build Task lint错误</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="yao" target="_blank" itemprop="author">yao</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-15T07:00:10.000Z" itemprop="datePublished"> 发表于 2016-04-15</time>
+    <time datetime="2017-03-03T02:36:36.000Z" itemprop="datePublished"> 发表于 2017-03-03</time>
     
   </p>
 </header>
@@ -102,166 +99,14 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVP实例demo"><span class="toc-number">1.</span> <span class="toc-text">MVP实例demo</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>因为公司的项目以后要加入MVP和Dagger，所以有了一下的学习，首先需了解一下什么是MVP模式。<br>MVP是从经典的MVC模式演变而来的，它们的基本思想有相同的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。（来至百度百科）<br>模型图如下：<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/cc.jpg?raw=true" alt="MVP模式"></p>
-<p>有上述模型图可以看到，Model和View之间的交互通过Presenter来完成，且Presenter与两者的交互可以通过松耦合进行达到，比如通过接口。<br>下面是我参照别人的博客写的例子，不好意思啊，当时忘了把参照的资料的链接保存下来，所以再次对参照资料的前辈说声对不起。</p>
-<h2 id="MVP实例demo"><a href="#MVP实例demo" class="headerlink" title="MVP实例demo"></a>MVP实例demo</h2><p>1.项目结构<br><img src="https://github.com/yaofengjuan/yaofengjuan.github.io/blob/master/images/aa.png?raw=true" alt="项目结构"><br>2.MOdel层<br>因为接收的实体MovieEntity包含的内容过多，我就不贴了，其实就是一个接收Json数据的一个实体类。<br>为了做到与Presenter的松耦合，我创建了一个IMovieModel接口</p>
-<pre><code>public interface IMovieModel 
-{
-void load(Subscriber&lt;MovieEntity&gt; subscriber);//获取info
-}
-</code></pre><a id="more"></a>
-<p>里面只有一个方法就是获取豆瓣电影信息，传的参数是回调参数，获取数据我使用的框架是Retrofit+RxJava。如果还没有了解Retrofit+RxJava，我建议先了解一下他们的用法，之后对IMovieModel进行实例化，如下：</p>
-<pre><code>public class MovieModel implements IMovieModel 
-{
-
-/**
- * 进行网络请求
- */
-private void getMovie(Subscriber&lt;MovieEntity&gt; subscriber) {
-    HttpMethods.getInstance().getTopMovie(subscriber, 0, 1);
-}
-
-@Override
-public void load(Subscriber&lt;MovieEntity&gt; subscriber) {
-    getMovie(subscriber);
-}
-}
-</code></pre><p>HttpMethods这个类是一个Api类,为了获取网络数据</p>
-<pre><code>public class HttpMethods 
-{
-public static final String BASE_URL = &quot;https://api.douban.com/v2/movie/&quot;;
-private static final int DEFAULT_TIMEOUT = 5;
-
-private Retrofit retrofit;
-private MovieService movieService;
-
-//构造方法私有
-private HttpMethods() {
-    //手动创建一个OkHttpClient并设置超时时间
-    OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
-    httpClientBuilder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
-
-    retrofit = new Retrofit.Builder()
-            .client(httpClientBuilder.build())
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-            .baseUrl(BASE_URL)
-            .build();
-
-    movieService = retrofit.create(MovieService.class);
-}
-
-//在访问HttpMethods时创建单例
-private static class SingletonHolder{
-    private static final HttpMethods INSTANCE = new HttpMethods();
-}
-
-//获取单例
-public static HttpMethods getInstance(){
-    return SingletonHolder.INSTANCE;
-}
-
-/**
- * 用于获取豆瓣电影Top250的数据
- * @param subscriber 由调用者传过来的观察者对象
- * @param start 起始位置
- * @param count 获取长度
- */
-public void getTopMovie(Subscriber&lt;MovieEntity&gt; subscriber, int start, int count)
-{
-    movieService.getTopMovie(start, count)
-            .subscribeOn(Schedulers.io())
-            .unsubscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(subscriber);
-}
-}
-</code></pre><p>MovieService的实现</p>
-<pre><code>public interface MovieService 
-{
-@GET(&quot;top250&quot;)
-Observable&lt;MovieEntity&gt; getTopMovie(@Query(&quot;start&quot;) int start, @Query(&quot;count&quot;) int count);
-}
-</code></pre><p>3.View层<br>把View层针对控件操作抽象出来接口</p>
-<pre><code>public interface IMovieInfoView 
-{
-
-void setMovieInfo(MovieEntity entity);
-
-void showErro(String erroMsg);
-}
-</code></pre><p>在Activity里面实现该接口，Activity只有用户操作和presenter的实现，</p>
-<pre><code>public class MainActivity extends AppCompatActivity implements IMovieInfoView 
-{
-
-@Bind(R.id.info)
-TextView info;
-@Bind(R.id.getMovieinfo)
-Button getMovieinfo;
-
-private MovieInfoPresenter presenter;
-
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    ButterKnife.bind(this);
-    presenter = new MovieInfoPresenter(this);
-}
-
-@OnClick(R.id.getMovieinfo)
-public void onClick() {
-    // getMovie();
-    presenter.loadMovieInfo();
-}
-
-
-@Override
-public void setMovieInfo(MovieEntity entity) {
-    info.setText(entity.toString());
-}
-
-@Override
-public void showErro(String erroMsg) {
-    info.setText(erroMsg);
-}
-}
-</code></pre><p>4.Presenter层</p>
-<pre><code>public class MovieInfoPresenter 
-{
-   private IMovieInfoView mMovieInfoView;
-   private IMovieModel mMovieModel;
-
-   public MovieInfoPresenter(IMovieInfoView view) {
-    mMovieInfoView = view;
-    mMovieModel = new MovieModel();
-   }
-
-   public void loadMovieInfo() {
-    Subscriber&lt;MovieEntity&gt; subscriber = new Subscriber&lt;MovieEntity&gt;() {
-        @Override
-        public void onCompleted() {
-            //Toast.makeText(MainActivity.this, &quot;Get Top Movie Completed&quot;, Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onError(Throwable e) {
-            mMovieInfoView.showErro(e.getMessage());
-        }
-
-        @Override
-        public void onNext(MovieEntity movieEntity) {
-            mMovieInfoView.setMovieInfo(movieEntity);
-        }
-    };
-    mMovieModel.load(subscriber);
-  }
-}
-</code></pre><p>MovieInfoPresenter持有View和Model的接口实现，使MovieInfoPresenter控制View和Model进行操作。<br>下篇再写如何在此项目里面整合进去Dagger2.</p>
+		<p>lint 错误，gradle 在build 任务中执行到lint任务时，在项目中检测到的错误，一般这些错误可以忽略，所以在报错的同时还给出了解决方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed for task &apos;:openCVLibrary2410:lint&apos;.</span><br><span class="line">&gt; Lint found errors in the project; aborting build.</span><br><span class="line">Fix the issues identified by lint, or add the following to your build script to proceed with errors:</span><br><span class="line">...</span><br><span class="line">android &#123;</span><br><span class="line">    lintOptions &#123;</span><br><span class="line">        abortOnError false</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>在build.gradle中加入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    lintOptions &#123;</span><br><span class="line">        abortOnError false</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -274,7 +119,7 @@ public void showErro(String erroMsg) {
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/04/15/MVP-Retrofit-RxJava-Dagger2实现的一个demo(一)/" data-title="MVP-Retrofit-RxJava-Dagger2实现的一个demo(一) | 枯枝的博客" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/03/03/gradle-build-Task-lint错误/" data-title="gradle build Task lint错误 | 枯枝的博客" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -287,19 +132,11 @@ public void showErro(String erroMsg) {
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/04/15/MVP-Retrofit-RxJava-Dagger2实现的一个demo-二/" title="MVP-Retrofit-RxJava-Dagger2实现的一个demo(二)">
-  <strong>上一篇：</strong><br/>
-  <span>
-  MVP-Retrofit-RxJava-Dagger2实现的一个demo(二)</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/03/21/美女养眼-其实是为了测试如何上传图片/"  title="美女养眼--其实是为了测试如何上传图片">
+<a href="/2016/09/27/好工具推荐/"  title="好工具推荐">
  <strong>下一篇：</strong><br/> 
- <span>美女养眼--其实是为了测试如何上传图片
+ <span>好工具推荐
 </span>
 </a>
 </div>
@@ -314,7 +151,7 @@ public void showErro(String erroMsg) {
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVP实例demo"><span class="toc-number">1.</span> <span class="toc-text">MVP实例demo</span></a></li></ol>
+ 
  
   </div>
 
